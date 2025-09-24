@@ -23,6 +23,7 @@ EOF
 # enable the new site and restart apache
 sudo a2ensite site1.conf
 sudo a2dissite 000-default.conf >/dev/null 2>&1 || true
+sudo systemctl enable --now apache2
 sudo systemctl restart apache2
 
 echo "Bare-metal Apache deployed successfully."
